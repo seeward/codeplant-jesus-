@@ -1860,7 +1860,7 @@ class Jesus {
  */
 //% blockNamespace = characters 
 //% weight=100
-//% groups'["Leper"]'
+//% groups='["Leper"]'
 namespace characters {
 
     //% blockId=leperCreate block="sprite of kind %kind=spritekind || at x %x y %y"
@@ -1868,7 +1868,7 @@ namespace characters {
     //% inlineInputMode=inline
     //% blockSetVariable=leper
     //% weight=100
-    //% group="Create Leper"
+    //% group="Leper"
     export function Leper(x: number, y: number, kind: number) {
         sprites.create(img`
             . . . . . . . . . . . . . . . . . . . . . . . . .
@@ -1913,7 +1913,7 @@ namespace characters {
     //% inlineInputMode=inline
     //% blockSetVariable=leperHealed
     //% weight=100
-    //% group="Create Leper Healed"
+    //% group="Leper"
     export function LeperHealed(x: number, y: number, kind: number) {
         sprites.create(img`
             . . . . . . . f f f f f f f f f f f . . . . . . .
