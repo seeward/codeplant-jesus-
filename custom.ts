@@ -1858,10 +1858,10 @@ class Jesus {
 /**
  * Spriate wrapper for characters
  */
-//% blockNamespace = codeplant.characters 
+//% blockNamespace = codeplant.jesus.characters 
 //% weight=100
 //% groups'["Leper"]'
-namespace codeplant.characters {
+namespace codeplant.jesus.characters {
 
     //% blockId=leperCreate block="sprite of kind %kind=spritekind || at x %x y %y"
     //% expandableArgumentMode=toggle
@@ -1960,10 +1960,10 @@ namespace codeplant.characters {
 /**
 * Sprite Wrapper for codeplant.explosions
 */
-//% blockNamespace = codeplant.effects 
+//% blockNamespace = codeplant.jesus.effects 
 //% weight=100 color=#d2b48c 
 //% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Healing"]'
-namespace codeplant.effects {
+namespace codeplant.jesus.effects {
 
     //% blockId=MedExplosionOne block="Med Explosion 1 on Sprite %s"
     //% weight=100
