@@ -135,7 +135,7 @@ namespace codeplant.jesus {
 
 
 
-    //% blockId=leperCreate block="sprite of kind %kind=spritekind || at x %x y %y"
+    //% blockId=leper block="sprite of kind %kind=spritekind || at x %x y %y"
     //% expandableArgumentMode=toggle
     //% inlineInputMode=inline
     //% blockSetVariable=leper
@@ -180,7 +180,7 @@ namespace codeplant.jesus {
             . . . . . e e e e . . . . . . . e e e e . . . . .
         `, kind)
     }
-    //% blockId=leperHealedCreate block="sprite of kind %kind=spritekind || at x %x y %y"
+    //% blockId=leperHealed block="sprite of kind %kind=spritekind || at x %x y %y"
     //% expandableArgumentMode=toggle
     //% inlineInputMode=inline
     //% blockSetVariable=leperHealed
