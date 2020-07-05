@@ -24,7 +24,7 @@ namespace codeplant.jesus {
 
 
     let _jesus: Jesus = null
-
+ 
     export let _jesus_still: Image[] = [img`
         . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
         . . . . . . . . . . e e e f e . . . . . . . . . . . . . . .
@@ -2500,12 +2500,15 @@ namespace effects {
         //%block='Right',
         Right = 2
     }
-    //% blockId=sendHealingBolt block="Send Bolt from Sprite %s towards %d for %t secs"
+
+    //% blockId=createBolt block="sprite of kind %kind=spritekind || at x %x y %y"
+    //% expandableArgumentMode=toggle
+    //% inlineInputMode=inline
+    //% blockSetVariable=healingBolt
     //% weight=100
     //% group="Healing"
-    export function sendHealingBolt(s: Sprite, d: Direction, t: number) {
-
-        let healingBolt = sprites.create(img`
+    export function createBolt(x:number,y:number) {
+        return sprites.create(img`
             . . 1 1 1 1 . .
             . 1 1 1 1 1 1 .
             1 1 1 1 1 1 1 1
@@ -2514,9 +2517,18 @@ namespace effects {
             1 1 1 1 1 1 1 1
             . 1 1 1 1 1 1 .
             . . 1 1 1 1 . .
-        `, SpriteKind.Projectile)
+        `, SpriteKind.Projectile);
+
+    }
+
+    //% blockId=sendHealingBolt block="Send Bolt from Sprite %s towards %d for %t secs"
+    //% weight=100
+    //% group="Healing"
+    export function sendHealingBolt(s: Sprite, d: Direction, t: number) {
+
+        
         animation.runImageAnimation(
-            healingBolt,
+            s,
             [img`
                 . . 5 . . 5 . .
                 5 . . 5 4 . . 5
@@ -2558,11 +2570,11 @@ namespace effects {
             true
         )
         let side = d === Direction.Right ? -10 : 10
-        healingBolt.setPosition(s.x - side, s.y)
+        s.setPosition(s.x - side, s.y)
         let vel = d === Direction.Left ? -200 : 200
-        healingBolt.setVelocity(vel, 0)
+        s.setVelocity(vel, 0)
         pause(t?t:1000)
-        healingBolt.destroy()
+        s.destroy()
     }
 
     //% blockId=playSmallHealing block="Play Small Healing on Sprite %s"
