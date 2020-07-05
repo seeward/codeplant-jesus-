@@ -24,6 +24,7 @@ namespace codeplant.jesus {
 
 
     let _jesus: Jesus = null
+
     export let _jesus_still: Image[] = [img`
         . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
         . . . . . . . . . . e e e f e . . . . . . . . . . . . . . .
@@ -1406,7 +1407,7 @@ class Jesus {
                 . . . . . . . . . . . . . e d d d . . . . . e d d d . . . .
                 . . . . . . . . . . . . e e e e e . . . . e e e e e . . . .
                 . . . . . . . . . . . . f f f f f . . . . f f f f f . . . .
-        `, img`
+           `, img`
                 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
                 . . . . . . . . . . . . . e e e f e . . . . . . . . . . . .
                 . . . . . . . . . . . . f e f f f e e e . . . . . . . . . .
@@ -1449,7 +1450,7 @@ class Jesus {
                 . . . . . . . . . . . e d d d 2 . . . . . . e d d d . . . .
                 . . . . . . . . . . e e e e e . . . . . . e e e e e . . . .
                 . . . . . . . . . . f f f f f . . . . . . f f f f f . . . .
-        `, img`
+           `, img`
                 . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
                 . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
                 . . . . . . . . . . e e e e f e e f f e . . . . . . . . . .
@@ -1492,7 +1493,7 @@ class Jesus {
                 . . . . . . . . . . . e d d d 2 . e d d d . . . . . . . . .
                 . . . . . . . . . . e e e e e . e e e e e . . . . . . . . .
                 . . . . . . . . . . f f f f f . f f f f f . . . . . . . . .
-        `, img`
+           `, img`
                 . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
                 . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
                 . . . . . . . . . . e e e e f e e f f e . . . . . . . . . .
@@ -1535,7 +1536,7 @@ class Jesus {
                 . . . . . . . . . . . . . . . e d d d 2 d . . . . . . . . .
                 . . . . . . . . . . . . . . e e e e e e e . . . . . . . . .
                 . . . . . . . . . . . . . . f f f f f f f . . . . . . . . .
-        `, img`
+           `, img`
                 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
                 . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
                 . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
@@ -1859,7 +1860,7 @@ class Jesus {
  */
 //% weight=100
 //% groups'["Leper"]'
-namespace characters {
+namespace codeplant.characters {
 
     //% blockId=leperCreate block="sprite of kind %kind=spritekind || at x %x y %y"
     //% expandableArgumentMode=toggle
@@ -1960,7 +1961,7 @@ namespace characters {
 */
 //% weight=100 color=#d2b48c 
 //% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Healing"]'
-namespace effects {
+namespace codeplant.effects {
 
     //% blockId=MedExplosionOne block="Med Explosion 1 on Sprite %s"
     //% weight=100
