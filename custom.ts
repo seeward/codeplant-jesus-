@@ -2,12 +2,11 @@
 * Sprite Wrapper for a codeplant.jesus lessons
 */
 //% weight=100 color=#d2b48c 
-//% blockNamespace=codeplant.jesus
 //% groups='["Create Jesus", "Jesus Properties", "Jesus Animations"]'
 namespace codeplant.jesus {
 
     //% block blockId=animationTypes
-    enum AnimationTypes {
+    export enum AnimationTypes {
         //% block='HealLeftWithStaff'
         HealLeftWithStaff = 1,
         //% block='HealRightWithStaff'
@@ -113,6 +112,9 @@ namespace codeplant.jesus {
 
     }
 
+
+
+
     // Round input towards 0; 1.4 becomes 1.0, -0.4 becomes 0.0
     export function roundTowardsZero(input: number): number {
         return Math.floor(input) + input < 0 ? 1 : 0;
@@ -135,7 +137,9 @@ namespace codeplant.jesus {
     }
 }
 
-
+/**
+ * A jesus Platformer
+ **/
 //% blockNamespace=codeplant.jesus color="#d2b48c" blockGap=8
 class Jesus {
     private player: Sprite;
@@ -1852,14 +1856,115 @@ class Jesus {
 }
 
 /**
-* Sprite Wrapper for a effect
-*/
-//% weight=100 color=#d2b48c 
-//% blockNamespace=effects
-//% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Healing"]'
-namespace effects {
+ * Spriate wrapper for characters
+ */
+//% blockNamespace = codeplant.characters 
+//% weight=100
+//% groups'["Leper"]'
+namespace codeplant.characters {
 
-    let _bolt: Sprite = null;
+    //% blockId=leperCreate block="sprite of kind %kind=spritekind || at x %x y %y"
+    //% expandableArgumentMode=toggle
+    //% inlineInputMode=inline
+    //% blockSetVariable=leper
+    //% weight=100
+    //% group="Create Leper"
+    export function Leper(x: number, y: number, kind: number) {
+        sprites.create(img`
+            . . . . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . 9 9 . . . 9 . . . . . . . .
+            . . . . . . . . . 9 9 9 9 9 9 9 9 9 . . . . . . .
+            . . . . . . . . . 9 9 2 9 9 . 9 2 9 . . . . . . .
+            . . . . . . . . 9 9 9 9 9 9 . 9 9 9 . . . . . . .
+            . . . . . . . . . 9 . . 9 9 9 9 9 9 . . . . . . .
+            . . . . . . . . . 9 . 9 9 2 2 2 9 9 . . . . . . .
+            . . . . . . . e e 9 9 9 9 9 9 9 9 9 . . . . . . .
+            . . e e e e e e e e e 9 9 9 9 9 e e e e e e e . .
+            . . e e e e e e e e e c c c e e e e e e e e e . .
+            . . . 6 6 . . 6 6 e 6 6 6 6 6 . 6 6 . . 6 6 . . .
+            . . . . 6 . . 6 6 6 e 6 6 6 6 6 6 6 . . 6 6 . . .
+            . . . 6 6 . . 6 6 6 6 e 6 6 6 6 6 6 . . 6 6 . . .
+            . . . 6 6 . . 6 . 6 6 6 e 6 6 6 6 6 . . 6 . . . .
+            . . . 6 6 . . 6 6 6 6 6 6 e 6 6 6 6 . . 6 6 . . .
+            . . . c c . . 6 6 6 6 6 . . . . 6 6 . . c c . . .
+            . . . c c . . c c c c . . c c e c c . . c c . . .
+            . . . e e . . c c c . . c c c c e c . . e e . . .
+            . . . 9 9 9 . e e e e e e e e e e e . 9 9 9 . . .
+            . . . 9 9 9 . b b b b b b b b b b b . 9 9 9 . . .
+            . . . . . . . b b b b b b b b b b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . . b . . . . . . . . b . . . . . . .
+            . . . . . . . . b . . . . . . . . b . . . . . . .
+            . . . . . . . . b . . . . . . . . b . . . . . . .
+            . . . . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . e e . . . . . . . e e . . . . . . .
+            . . . . . . . e e . . . . . . . e e . . . . . . .
+            . . . . . e e e e . . . . . . . e e e e . . . . .
+            . . . . . e e e e . . . . . . . e e e e . . . . .
+        `, kind)
+    }
+    //% blockId=leperHealedCreate block="sprite of kind %kind=spritekind || at x %x y %y"
+    //% expandableArgumentMode=toggle
+    //% inlineInputMode=inline
+    //% blockSetVariable=leperHealed
+    //% weight=100
+    //% group="Create Leper Healed"
+    export function LeperHealed(x: number, y: number, kind: number) {
+        sprites.create(img`
+            . . . . . . . f f f f f f f f f f f . . . . . . .
+            . . . . . . f f f f f f f f f f f f f . . . . . .
+            . . . . . . f f f f e e e e e e f f f . . . . . .
+            . . . . . . f f e e e e e e e e e f f . . . . . .
+            . . . . . . f e e e 8 e e e e 8 e . . . . . . . .
+            . . . . . . . e e e e e e e e e e . . . . . . . .
+            . . . . . . . . e e e e e e e e e . . . . . . . .
+            . . . . . . . . e e e e 1 1 1 e e . . . . . . . .
+            . . . . . . . . e e e e e e e e e . . . . . . . .
+            . . . . . . . . . . e e e e e . . . . . . . . . .
+            . . . . . . . e e e 6 6 6 6 6 e e e . . . . . . .
+            . . e e e e e e e e e c c c e e e e e e e e e . .
+            . . e e e e e e e e e c c c e e e e e e e e e . .
+            . . . 6 6 . . 6 6 e 6 6 6 6 6 6 6 6 . . 6 6 . . .
+            . . . 6 6 . . 6 6 6 e 6 6 6 6 6 6 6 . . 6 6 . . .
+            . . . 6 6 . . 6 6 6 6 e 6 6 6 6 6 6 . . 6 6 . . .
+            . . . 6 6 . . 6 6 6 6 6 e 6 6 6 6 6 . . 6 6 . . .
+            . . . 6 6 . . 6 6 6 6 6 6 e 6 6 6 6 . . 6 6 . . .
+            . . . c c . . 6 6 6 6 6 6 6 e 6 6 6 . . c c . . .
+            . . . c c . . c c c c c c c c e c c . . c c . . .
+            . . . e e . . c c c c c c c c c e c . . e e . . .
+            . . . e e e . e e e e e e e e e e e . e e e . . .
+            . . . e e e . b b b b b b b b b b b . e e e . . .
+            . . . . . . . b b b b b b b b b b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . e e . . . . . . . e e . . . . . . .
+            . . . . . . . e e . . . . . . . e e . . . . . . .
+            . . . . . e e e e . . . . . . . e e e e . . . . .
+            . . . . . e e e e . . . . . . . e e e e . . . . .
+        `, kind)
+    }
+
+}
+
+
+/**
+* Sprite Wrapper for codeplant.explosions
+*/
+//% blockNamespace = codeplant.effects 
+//% weight=100 color=#d2b48c 
+//% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Healing"]'
+namespace codeplant.effects {
+
     //% blockId=MedExplosionOne block="Med Explosion 1 on Sprite %s"
     //% weight=100
     //% group="Med Explosions"
@@ -2391,21 +2496,18 @@ namespace effects {
         )
     }
 
-    enum Direction {
+    export enum Direction {
         //%block='Left'
         Left = 1,
         //%block='Right',
         Right = 2
     }
-
-    //% blockId=createBolt block="sprite of kind %kind=spritekind.projectile || at x %x y %y"
-    //% expandableArgumentMode=toggle
-    //% inlineInputMode=inline
-    //% blockSetVariable=healingBolt
+    //% blockId=sendHealingBolt block="Send Bolt from Sprite %s towards %d"
     //% weight=100
     //% group="Healing"
-    export function createBolt(x: number, y: number) {
-        _bolt = sprites.create(img`
+    export function sendHealingBolt(s: Sprite, d: Direction) {
+
+        let healingBolt = sprites.create(img`
             . . 1 1 1 1 . .
             . 1 1 1 1 1 1 .
             1 1 1 1 1 1 1 1
@@ -2414,25 +2516,9 @@ namespace effects {
             1 1 1 1 1 1 1 1
             . 1 1 1 1 1 1 .
             . . 1 1 1 1 . .
-        `, SpriteKind.Projectile);
-        return _bolt
-    }
-
-    //% blockId=bolt block="bolt sprite"
-    //% group="Healing"
-    //% weight=8
-    export function bolt() {
-        return _bolt;
-    }
-
-    //% blockId=sendHealingBolt block="Send Bolt from Sprite %s towards %d for %t secs"
-    //% weight=100
-    //% group="Healing"
-    export function sendHealingBolt(s: Sprite, d: Direction, t: number) {
-
-
+        `, SpriteKind.Projectile)
         animation.runImageAnimation(
-            s,
+            healingBolt,
             [img`
                 . . 5 . . 5 . .
                 5 . . 5 4 . . 5
@@ -2474,11 +2560,9 @@ namespace effects {
             true
         )
         let side = d === Direction.Right ? -10 : 10
-        s.setPosition(s.x - side, s.y)
+        healingBolt.setPosition(s.x - side, s.y)
         let vel = d === Direction.Left ? -200 : 200
-        s.setVelocity(vel, 0)
-        pause(t ? t : 1000)
-        s.destroy()
+        healingBolt.setVelocity(vel, 0)
     }
 
     //% blockId=playSmallHealing block="Play Small Healing on Sprite %s"
@@ -2680,109 +2764,4 @@ namespace effects {
         )
     }
 
-}
-
-/**
-* Sprite Wrapper for a characters
-*/
-//% blockNamespace=characters 
-//% weight=100
-//% groups='["Leper"]'
-namespace characters {
-    let _leper: Sprite = null
-    let _leperHealed: Sprite = null
-    //% blockId=leperCreate block="sprite of kind %kind=spritekind || at x %x y %y"
-    //% expandableArgumentMode=toggle
-    //% inlineInputMode=inline
-    //% blockSetVariable=leper
-    //% weight=100
-    //% group="Leper"
-    export function Leper(x: number, y: number, kind: number) {
-        _leper = sprites.create(img`
-            . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . 9 9 . . . 9 . . . . . . . .
-            . . . . . . . . . 9 9 9 9 9 9 9 9 9 . . . . . . .
-            . . . . . . . . . 9 9 2 9 9 . 9 2 9 . . . . . . .
-            . . . . . . . . 9 9 9 9 9 9 . 9 9 9 . . . . . . .
-            . . . . . . . . . 9 . . 9 9 9 9 9 9 . . . . . . .
-            . . . . . . . . . 9 . 9 9 2 2 2 9 9 . . . . . . .
-            . . . . . . . e e 9 9 9 9 9 9 9 9 9 . . . . . . .
-            . . e e e e e e e e e 9 9 9 9 9 e e e e e e e . .
-            . . e e e e e e e e e c c c e e e e e e e e e . .
-            . . . 6 6 . . 6 6 e 6 6 6 6 6 . 6 6 . . 6 6 . . .
-            . . . . 6 . . 6 6 6 e 6 6 6 6 6 6 6 . . 6 6 . . .
-            . . . 6 6 . . 6 6 6 6 e 6 6 6 6 6 6 . . 6 6 . . .
-            . . . 6 6 . . 6 . 6 6 6 e 6 6 6 6 6 . . 6 . . . .
-            . . . 6 6 . . 6 6 6 6 6 6 e 6 6 6 6 . . 6 6 . . .
-            . . . c c . . 6 6 6 6 6 . . . . 6 6 . . c c . . .
-            . . . c c . . c c c c . . c c e c c . . c c . . .
-            . . . e e . . c c c . . c c c c e c . . e e . . .
-            . . . 9 9 9 . e e e e e e e e e e e . 9 9 9 . . .
-            . . . 9 9 9 . b b b b b b b b b b b . 9 9 9 . . .
-            . . . . . . . b b b b b b b b b b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . . b . . . . . . . . b . . . . . . .
-            . . . . . . . . b . . . . . . . . b . . . . . . .
-            . . . . . . . . b . . . . . . . . b . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . e e . . . . . . . e e . . . . . . .
-            . . . . . . . e e . . . . . . . e e . . . . . . .
-            . . . . . e e e e . . . . . . . e e e e . . . . .
-            . . . . . e e e e . . . . . . . e e e e . . . . .
-        `, kind)
-        return Leper
-    }
-    //% blockId=leperHealedCreate block="sprite of kind %kind=spritekind || at x %x y %y"
-    //% expandableArgumentMode=toggle
-    //% inlineInputMode=inline
-    //% blockSetVariable=leperHealed
-    //% weight=100
-    //% group="Leper"
-    export function LeperHealed(x: number, y: number, kind: number) {
-        _leperHealed = sprites.create(img`
-            . . . . . . . f f f f f f f f f f f . . . . . . .
-            . . . . . . f f f f f f f f f f f f f . . . . . .
-            . . . . . . f f f f e e e e e e f f f . . . . . .
-            . . . . . . f f e e e e e e e e e f f . . . . . .
-            . . . . . . f e e e 8 e e e e 8 e . . . . . . . .
-            . . . . . . . e e e e e e e e e e . . . . . . . .
-            . . . . . . . . e e e e e e e e e . . . . . . . .
-            . . . . . . . . e e e e 1 1 1 e e . . . . . . . .
-            . . . . . . . . e e e e e e e e e . . . . . . . .
-            . . . . . . . . . . e e e e e . . . . . . . . . .
-            . . . . . . . e e e 6 6 6 6 6 e e e . . . . . . .
-            . . e e e e e e e e e c c c e e e e e e e e e . .
-            . . e e e e e e e e e c c c e e e e e e e e e . .
-            . . . 6 6 . . 6 6 e 6 6 6 6 6 6 6 6 . . 6 6 . . .
-            . . . 6 6 . . 6 6 6 e 6 6 6 6 6 6 6 . . 6 6 . . .
-            . . . 6 6 . . 6 6 6 6 e 6 6 6 6 6 6 . . 6 6 . . .
-            . . . 6 6 . . 6 6 6 6 6 e 6 6 6 6 6 . . 6 6 . . .
-            . . . 6 6 . . 6 6 6 6 6 6 e 6 6 6 6 . . 6 6 . . .
-            . . . c c . . 6 6 6 6 6 6 6 e 6 6 6 . . c c . . .
-            . . . c c . . c c c c c c c c e c c . . c c . . .
-            . . . e e . . c c c c c c c c c e c . . e e . . .
-            . . . e e e . e e e e e e e e e e e . e e e . . .
-            . . . e e e . b b b b b b b b b b b . e e e . . .
-            . . . . . . . b b b b b b b b b b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . e e . . . . . . . e e . . . . . . .
-            . . . . . . . e e . . . . . . . e e . . . . . . .
-            . . . . . e e e e . . . . . . . e e e e . . . . .
-            . . . . . e e e e . . . . . . . e e e e . . . . .
-        `, kind)
-        return _leperHealed
-    }
-
-}
-
+} 
