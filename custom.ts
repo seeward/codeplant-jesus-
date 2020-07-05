@@ -112,9 +112,6 @@ namespace codeplant.jesus {
 
     }
 
- 
-
-
     // Round input towards 0; 1.4 becomes 1.0, -0.4 becomes 0.0
     export function roundTowardsZero(input: number): number {
         return Math.floor(input) + input < 0 ? 1 : 0;
@@ -1860,6 +1857,7 @@ class Jesus {
  */
 //% weight=100
 //% groups'["Leper"]'
+//% blockNamespace=characters
 namespace characters {
 
     //% blockId=leperCreate block="sprite of kind %kind=spritekind || at x %x y %y"
@@ -1960,9 +1958,11 @@ namespace characters {
 * Sprite Wrapper for codeplant.explosions
 */
 //% weight=100 color=#d2b48c 
+//% blockNamespace=effects
 //% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Healing"]'
 namespace effects {
 
+    let _bolt:Sprite = null;
     //% blockId=MedExplosionOne block="Med Explosion 1 on Sprite %s"
     //% weight=100
     //% group="Med Explosions"
@@ -2501,14 +2501,14 @@ namespace effects {
         Right = 2
     }
 
-    //% blockId=createBolt block="sprite of kind %kind=spritekind || at x %x y %y"
+    //% blockId=createBolt block="sprite of kind %kind=spritekind.projectile || at x %x y %y"
     //% expandableArgumentMode=toggle
     //% inlineInputMode=inline
     //% blockSetVariable=healingBolt
     //% weight=100
     //% group="Healing"
     export function createBolt(x:number,y:number) {
-        return sprites.create(img`
+        _bolt = sprites.create(img`
             . . 1 1 1 1 . .
             . 1 1 1 1 1 1 .
             1 1 1 1 1 1 1 1
@@ -2519,6 +2519,12 @@ namespace effects {
             . . 1 1 1 1 . .
         `, SpriteKind.Projectile);
 
+    }
+    //% group="Healing"
+    //% blockId=bolt block="%bolt sprite"
+    //% weight=8
+    export function bolt() {
+        return _bolt;
     }
 
     //% blockId=sendHealingBolt block="Send Bolt from Sprite %s towards %d for %t secs"
