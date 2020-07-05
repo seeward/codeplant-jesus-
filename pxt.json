@@ -6,7 +6,6 @@
     },
     "description": "Jesus sprites and animations",
     "files": [
-        "main.ts",
         "README.md",
         "custom.ts"
     ],
