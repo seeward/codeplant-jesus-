@@ -6,7 +6,7 @@
 namespace codeplant.jesus {
 
     //% block blockId=animationTypes
-    export enum AnimationTypes {
+    enum AnimationTypes {
         //% block='HealLeftWithStaff'
         HealLeftWithStaff = 1,
         //% block='HealRightWithStaff'
@@ -2389,7 +2389,7 @@ namespace effects {
         )
     }
 
-    export enum Direction {
+    enum Direction {
         //%block='Left'
         Left = 1,
         //%block='Right',
@@ -2413,7 +2413,7 @@ namespace effects {
             . 1 1 1 1 1 1 .
             . . 1 1 1 1 . .
         `, SpriteKind.Projectile);
-
+        return _bolt
     }
 
     //% blockId=bolt block="bolt sprite"
