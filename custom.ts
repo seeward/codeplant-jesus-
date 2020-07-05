@@ -1407,7 +1407,7 @@ class Jesus {
                 . . . . . . . . . . . . . e d d d . . . . . e d d d . . . .
                 . . . . . . . . . . . . e e e e e . . . . e e e e e . . . .
                 . . . . . . . . . . . . f f f f f . . . . f f f f f . . . .
-           `, img`
+            `,img`
                 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
                 . . . . . . . . . . . . . e e e f e . . . . . . . . . . . .
                 . . . . . . . . . . . . f e f f f e e e . . . . . . . . . .
@@ -1450,7 +1450,7 @@ class Jesus {
                 . . . . . . . . . . . e d d d 2 . . . . . . e d d d . . . .
                 . . . . . . . . . . e e e e e . . . . . . e e e e e . . . .
                 . . . . . . . . . . f f f f f . . . . . . f f f f f . . . .
-           `, img`
+            `,img`
                 . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
                 . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
                 . . . . . . . . . . e e e e f e e f f e . . . . . . . . . .
@@ -1493,7 +1493,7 @@ class Jesus {
                 . . . . . . . . . . . e d d d 2 . e d d d . . . . . . . . .
                 . . . . . . . . . . e e e e e . e e e e e . . . . . . . . .
                 . . . . . . . . . . f f f f f . f f f f f . . . . . . . . .
-           `, img`
+            `,img`
                 . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
                 . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
                 . . . . . . . . . . e e e e f e e f f e . . . . . . . . . .
@@ -1536,7 +1536,7 @@ class Jesus {
                 . . . . . . . . . . . . . . . e d d d 2 d . . . . . . . . .
                 . . . . . . . . . . . . . . e e e e e e e . . . . . . . . .
                 . . . . . . . . . . . . . . f f f f f f f . . . . . . . . .
-           `, img`
+            `,img`
                 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
                 . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
                 . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
@@ -1858,6 +1858,7 @@ class Jesus {
 /**
  * Spriate wrapper for characters
  */
+//% blockNamespace = codeplant.characters 
 //% weight=100
 //% groups'["Leper"]'
 namespace codeplant.characters {
@@ -1959,6 +1960,7 @@ namespace codeplant.characters {
 /**
 * Sprite Wrapper for codeplant.explosions
 */
+//% blockNamespace = codeplant.effects 
 //% weight=100 color=#d2b48c 
 //% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Healing"]'
 namespace codeplant.effects {
