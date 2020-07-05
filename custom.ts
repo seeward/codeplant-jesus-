@@ -1856,9 +1856,8 @@ class Jesus {
 }
 
 /**
- * Spriate wrapper for characters
+ * Sprite wrapper for characters
  */
-//% blockNamespace = characters 
 //% weight=100
 //% groups'["Leper"]'
 namespace characters {
@@ -1960,7 +1959,6 @@ namespace characters {
 /**
 * Sprite Wrapper for codeplant.explosions
 */
-//% blockNamespace = effects 
 //% weight=100 color=#d2b48c 
 //% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Healing"]'
 namespace effects {
@@ -2563,7 +2561,7 @@ namespace effects {
         healingBolt.setPosition(s.x - side, s.y)
         let vel = d === Direction.Left ? -200 : 200
         healingBolt.setVelocity(vel, 0)
-        pause(1000)
+        pause(t?t:1000)
         healingBolt.destroy()
     }
 
