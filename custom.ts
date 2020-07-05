@@ -24,7 +24,7 @@ namespace codeplant.jesus {
 
 
     let _jesus: Jesus = null
- 
+
     export let _jesus_still: Image[] = [img`
         . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
         . . . . . . . . . . e e e f e . . . . . . . . . . . . . . .
@@ -134,9 +134,7 @@ namespace codeplant.jesus {
     }
 }
 
-/**
- * A jesus Platformer
- **/
+
 //% blockNamespace=codeplant.jesus color="#d2b48c" blockGap=8
 class Jesus {
     private player: Sprite;
@@ -1356,7 +1354,7 @@ class Jesus {
             . . . . . . . . . d e d d d . . . . . d e d d d . . . . . .
             . . . . . . . . . e e e e e . . . . . e e e e e . . . . . .
             . . . . . . . . . f f f f f . . . . . f f f f f . . . . . .
-        `]),100,true)
+        `]), 100, true)
     }
     playWalkLeftAnimation() {
         animation.runImageAnimation(
@@ -1404,7 +1402,7 @@ class Jesus {
                 . . . . . . . . . . . . . e d d d . . . . . e d d d . . . .
                 . . . . . . . . . . . . e e e e e . . . . e e e e e . . . .
                 . . . . . . . . . . . . f f f f f . . . . f f f f f . . . .
-            `,img`
+            `, img`
                 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
                 . . . . . . . . . . . . . e e e f e . . . . . . . . . . . .
                 . . . . . . . . . . . . f e f f f e e e . . . . . . . . . .
@@ -1447,7 +1445,7 @@ class Jesus {
                 . . . . . . . . . . . e d d d 2 . . . . . . e d d d . . . .
                 . . . . . . . . . . e e e e e . . . . . . e e e e e . . . .
                 . . . . . . . . . . f f f f f . . . . . . f f f f f . . . .
-            `,img`
+            `, img`
                 . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
                 . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
                 . . . . . . . . . . e e e e f e e f f e . . . . . . . . . .
@@ -1490,7 +1488,7 @@ class Jesus {
                 . . . . . . . . . . . e d d d 2 . e d d d . . . . . . . . .
                 . . . . . . . . . . e e e e e . e e e e e . . . . . . . . .
                 . . . . . . . . . . f f f f f . f f f f f . . . . . . . . .
-            `,img`
+            `, img`
                 . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
                 . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
                 . . . . . . . . . . e e e e f e e f f e . . . . . . . . . .
@@ -1533,7 +1531,7 @@ class Jesus {
                 . . . . . . . . . . . . . . . e d d d 2 d . . . . . . . . .
                 . . . . . . . . . . . . . . e e e e e e e . . . . . . . . .
                 . . . . . . . . . . . . . . f f f f f f f . . . . . . . . .
-            `,img`
+            `, img`
                 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
                 . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
                 . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
@@ -1852,115 +1850,12 @@ class Jesus {
 
 }
 
-/**
- * Sprite wrapper for characters
- */
-//% weight=100
-//% groups='["Leper"]'
-namespace characters {
 
-    //% blockId=leperCreate block="sprite of kind %kind=spritekind || at x %x y %y"
-    //% expandableArgumentMode=toggle
-    //% inlineInputMode=inline
-    //% blockSetVariable=leper
-    //% weight=100
-    //% group="Leper"
-    export function Leper(x:number,y:number,kind:number) {
-        sprites.create(img`
-            . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . . . . . 9 9 . . . 9 . . . . . . . .
-            . . . . . . . . . 9 9 9 9 9 9 9 9 9 . . . . . . .
-            . . . . . . . . . 9 9 2 9 9 . 9 2 9 . . . . . . .
-            . . . . . . . . 9 9 9 9 9 9 . 9 9 9 . . . . . . .
-            . . . . . . . . . 9 . . 9 9 9 9 9 9 . . . . . . .
-            . . . . . . . . . 9 . 9 9 2 2 2 9 9 . . . . . . .
-            . . . . . . . e e 9 9 9 9 9 9 9 9 9 . . . . . . .
-            . . e e e e e e e e e 9 9 9 9 9 e e e e e e e . .
-            . . e e e e e e e e e c c c e e e e e e e e e . .
-            . . . 6 6 . . 6 6 e 6 6 6 6 6 . 6 6 . . 6 6 . . .
-            . . . . 6 . . 6 6 6 e 6 6 6 6 6 6 6 . . 6 6 . . .
-            . . . 6 6 . . 6 6 6 6 e 6 6 6 6 6 6 . . 6 6 . . .
-            . . . 6 6 . . 6 . 6 6 6 e 6 6 6 6 6 . . 6 . . . .
-            . . . 6 6 . . 6 6 6 6 6 6 e 6 6 6 6 . . 6 6 . . .
-            . . . c c . . 6 6 6 6 6 . . . . 6 6 . . c c . . .
-            . . . c c . . c c c c . . c c e c c . . c c . . .
-            . . . e e . . c c c . . c c c c e c . . e e . . .
-            . . . 9 9 9 . e e e e e e e e e e e . 9 9 9 . . .
-            . . . 9 9 9 . b b b b b b b b b b b . 9 9 9 . . .
-            . . . . . . . b b b b b b b b b b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . . b . . . . . . . . b . . . . . . .
-            . . . . . . . . b . . . . . . . . b . . . . . . .
-            . . . . . . . . b . . . . . . . . b . . . . . . .
-            . . . . . . . . . . . . . . . . . . . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . e e . . . . . . . e e . . . . . . .
-            . . . . . . . e e . . . . . . . e e . . . . . . .
-            . . . . . e e e e . . . . . . . e e e e . . . . .
-            . . . . . e e e e . . . . . . . e e e e . . . . .
-        `, kind)
-    }
-    //% blockId=leperHealedCreate block="sprite of kind %kind=spritekind || at x %x y %y"
-    //% expandableArgumentMode=toggle
-    //% inlineInputMode=inline
-    //% blockSetVariable=leperHealed
-    //% weight=100
-    //% group="Leper"
-    export function LeperHealed(x: number, y: number, kind: number) {
-        sprites.create(img`
-            . . . . . . . f f f f f f f f f f f . . . . . . .
-            . . . . . . f f f f f f f f f f f f f . . . . . .
-            . . . . . . f f f f e e e e e e f f f . . . . . .
-            . . . . . . f f e e e e e e e e e f f . . . . . .
-            . . . . . . f e e e 8 e e e e 8 e . . . . . . . .
-            . . . . . . . e e e e e e e e e e . . . . . . . .
-            . . . . . . . . e e e e e e e e e . . . . . . . .
-            . . . . . . . . e e e e 1 1 1 e e . . . . . . . .
-            . . . . . . . . e e e e e e e e e . . . . . . . .
-            . . . . . . . . . . e e e e e . . . . . . . . . .
-            . . . . . . . e e e 6 6 6 6 6 e e e . . . . . . .
-            . . e e e e e e e e e c c c e e e e e e e e e . .
-            . . e e e e e e e e e c c c e e e e e e e e e . .
-            . . . 6 6 . . 6 6 e 6 6 6 6 6 6 6 6 . . 6 6 . . .
-            . . . 6 6 . . 6 6 6 e 6 6 6 6 6 6 6 . . 6 6 . . .
-            . . . 6 6 . . 6 6 6 6 e 6 6 6 6 6 6 . . 6 6 . . .
-            . . . 6 6 . . 6 6 6 6 6 e 6 6 6 6 6 . . 6 6 . . .
-            . . . 6 6 . . 6 6 6 6 6 6 e 6 6 6 6 . . 6 6 . . .
-            . . . c c . . 6 6 6 6 6 6 6 e 6 6 6 . . c c . . .
-            . . . c c . . c c c c c c c c e c c . . c c . . .
-            . . . e e . . c c c c c c c c c e c . . e e . . .
-            . . . e e e . e e e e e e e e e e e . e e e . . .
-            . . . e e e . b b b b b b b b b b b . e e e . . .
-            . . . . . . . b b b b b b b b b b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . b b . . . . . . . b b . . . . . . .
-            . . . . . . . e e . . . . . . . e e . . . . . . .
-            . . . . . . . e e . . . . . . . e e . . . . . . .
-            . . . . . e e e e . . . . . . . e e e e . . . . .
-            . . . . . e e e e . . . . . . . e e e e . . . . .
-        `, kind)
-    }
-
-}
-
-
-/**
-* Sprite Wrapper for codeplant.explosions
-*/
 //% weight=100 color=#d2b48c 
 //% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Healing"]'
 namespace effects {
 
-    let _bolt:Sprite = null;
+    let _bolt: Sprite = null;
     //% blockId=MedExplosionOne block="Med Explosion 1 on Sprite %s"
     //% weight=100
     //% group="Med Explosions"
@@ -2505,7 +2400,7 @@ namespace effects {
     //% blockSetVariable=healingBolt
     //% weight=100
     //% group="Healing"
-    export function createBolt(x:number,y:number) {
+    export function createBolt(x: number, y: number) {
         _bolt = sprites.create(img`
             . . 1 1 1 1 . .
             . 1 1 1 1 1 1 .
@@ -2531,7 +2426,7 @@ namespace effects {
     //% group="Healing"
     export function sendHealingBolt(s: Sprite, d: Direction, t: number) {
 
-        
+
         animation.runImageAnimation(
             s,
             [img`
@@ -2578,7 +2473,7 @@ namespace effects {
         s.setPosition(s.x - side, s.y)
         let vel = d === Direction.Left ? -200 : 200
         s.setVelocity(vel, 0)
-        pause(t?t:1000)
+        pause(t ? t : 1000)
         s.destroy()
     }
 
@@ -2782,3 +2677,104 @@ namespace effects {
     }
 
 }
+
+//% weight=100
+//% groups='["Leper"]'
+namespace characters {
+    let _leper: Sprite = null
+    let _leperHealed: Sprite = null
+    //% blockId=leperCreate block="sprite of kind %kind=spritekind || at x %x y %y"
+    //% expandableArgumentMode=toggle
+    //% inlineInputMode=inline
+    //% blockSetVariable=leper
+    //% weight=100
+    //% group="Leper"
+    export function Leper(x: number, y: number, kind: number) {
+        _leper = sprites.create(img`
+            . . . . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . . . . . 9 9 . . . 9 . . . . . . . .
+            . . . . . . . . . 9 9 9 9 9 9 9 9 9 . . . . . . .
+            . . . . . . . . . 9 9 2 9 9 . 9 2 9 . . . . . . .
+            . . . . . . . . 9 9 9 9 9 9 . 9 9 9 . . . . . . .
+            . . . . . . . . . 9 . . 9 9 9 9 9 9 . . . . . . .
+            . . . . . . . . . 9 . 9 9 2 2 2 9 9 . . . . . . .
+            . . . . . . . e e 9 9 9 9 9 9 9 9 9 . . . . . . .
+            . . e e e e e e e e e 9 9 9 9 9 e e e e e e e . .
+            . . e e e e e e e e e c c c e e e e e e e e e . .
+            . . . 6 6 . . 6 6 e 6 6 6 6 6 . 6 6 . . 6 6 . . .
+            . . . . 6 . . 6 6 6 e 6 6 6 6 6 6 6 . . 6 6 . . .
+            . . . 6 6 . . 6 6 6 6 e 6 6 6 6 6 6 . . 6 6 . . .
+            . . . 6 6 . . 6 . 6 6 6 e 6 6 6 6 6 . . 6 . . . .
+            . . . 6 6 . . 6 6 6 6 6 6 e 6 6 6 6 . . 6 6 . . .
+            . . . c c . . 6 6 6 6 6 . . . . 6 6 . . c c . . .
+            . . . c c . . c c c c . . c c e c c . . c c . . .
+            . . . e e . . c c c . . c c c c e c . . e e . . .
+            . . . 9 9 9 . e e e e e e e e e e e . 9 9 9 . . .
+            . . . 9 9 9 . b b b b b b b b b b b . 9 9 9 . . .
+            . . . . . . . b b b b b b b b b b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . . b . . . . . . . . b . . . . . . .
+            . . . . . . . . b . . . . . . . . b . . . . . . .
+            . . . . . . . . b . . . . . . . . b . . . . . . .
+            . . . . . . . . . . . . . . . . . . . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . e e . . . . . . . e e . . . . . . .
+            . . . . . . . e e . . . . . . . e e . . . . . . .
+            . . . . . e e e e . . . . . . . e e e e . . . . .
+            . . . . . e e e e . . . . . . . e e e e . . . . .
+        `, kind)
+        return Leper
+    }
+    //% blockId=leperHealedCreate block="sprite of kind %kind=spritekind || at x %x y %y"
+    //% expandableArgumentMode=toggle
+    //% inlineInputMode=inline
+    //% blockSetVariable=leperHealed
+    //% weight=100
+    //% group="Leper"
+    export function LeperHealed(x: number, y: number, kind: number) {
+        _leperHealed = sprites.create(img`
+            . . . . . . . f f f f f f f f f f f . . . . . . .
+            . . . . . . f f f f f f f f f f f f f . . . . . .
+            . . . . . . f f f f e e e e e e f f f . . . . . .
+            . . . . . . f f e e e e e e e e e f f . . . . . .
+            . . . . . . f e e e 8 e e e e 8 e . . . . . . . .
+            . . . . . . . e e e e e e e e e e . . . . . . . .
+            . . . . . . . . e e e e e e e e e . . . . . . . .
+            . . . . . . . . e e e e 1 1 1 e e . . . . . . . .
+            . . . . . . . . e e e e e e e e e . . . . . . . .
+            . . . . . . . . . . e e e e e . . . . . . . . . .
+            . . . . . . . e e e 6 6 6 6 6 e e e . . . . . . .
+            . . e e e e e e e e e c c c e e e e e e e e e . .
+            . . e e e e e e e e e c c c e e e e e e e e e . .
+            . . . 6 6 . . 6 6 e 6 6 6 6 6 6 6 6 . . 6 6 . . .
+            . . . 6 6 . . 6 6 6 e 6 6 6 6 6 6 6 . . 6 6 . . .
+            . . . 6 6 . . 6 6 6 6 e 6 6 6 6 6 6 . . 6 6 . . .
+            . . . 6 6 . . 6 6 6 6 6 e 6 6 6 6 6 . . 6 6 . . .
+            . . . 6 6 . . 6 6 6 6 6 6 e 6 6 6 6 . . 6 6 . . .
+            . . . c c . . 6 6 6 6 6 6 6 e 6 6 6 . . c c . . .
+            . . . c c . . c c c c c c c c e c c . . c c . . .
+            . . . e e . . c c c c c c c c c e c . . e e . . .
+            . . . e e e . e e e e e e e e e e e . e e e . . .
+            . . . e e e . b b b b b b b b b b b . e e e . . .
+            . . . . . . . b b b b b b b b b b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . b b . . . . . . . b b . . . . . . .
+            . . . . . . . e e . . . . . . . e e . . . . . . .
+            . . . . . . . e e . . . . . . . e e . . . . . . .
+            . . . . . e e e e . . . . . . . e e e e . . . . .
+            . . . . . e e e e . . . . . . . e e e e . . . . .
+        `, kind)
+        return _leperHealed
+    }
+
+}
+
