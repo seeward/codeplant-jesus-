@@ -2,6 +2,7 @@
 * Sprite Wrapper for a codeplant.jesus lessons
 */
 //% weight=100 color=#d2b48c 
+//% blockNamespace=codeplant.jesus
 //% groups='["Create Jesus", "Jesus Properties", "Jesus Animations"]'
 namespace codeplant.jesus {
 
@@ -1854,6 +1855,7 @@ class Jesus {
 * Sprite Wrapper for a effect
 */
 //% weight=100 color=#d2b48c 
+//% blockNamespace=effects
 //% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Healing"]'
 namespace effects {
 
@@ -2683,6 +2685,7 @@ namespace effects {
 /**
 * Sprite Wrapper for a characters
 */
+//% blockNamespace=characters 
 //% weight=100
 //% groups='["Leper"]'
 namespace characters {
