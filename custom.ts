@@ -1850,7 +1850,9 @@ class Jesus {
 
 }
 
-
+/**
+* Sprite Wrapper for a effect
+*/
 //% weight=100 color=#d2b48c 
 //% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Healing"]'
 namespace effects {
@@ -2678,6 +2680,9 @@ namespace effects {
 
 }
 
+/**
+* Sprite Wrapper for a characters
+*/
 //% weight=100
 //% groups='["Leper"]'
 namespace characters {
