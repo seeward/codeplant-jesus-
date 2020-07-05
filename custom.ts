@@ -2295,7 +2295,7 @@ namespace explosions {
     //% blockId=playSmallHealing block="Play Small Healing on Sprite %s"
     //% weight=100
     //% group="Misc"
-    function playSmallHealingAnimation(s: Sprite) {
+    export function playSmallHealingAnimation(s: Sprite) {
         animation.runImageAnimation(
             s,
             [img`

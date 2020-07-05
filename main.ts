@@ -1,8 +1,10 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    explosions.smallExplosionOne(jesus.sprite)
+    codeplant.jesus.playAnimation(codeplant.jesus.AnimationTypes.HealLeftWithStaff)
+    pause(400)
+    explosions.sendHealingBolt(tes.sprite)
 })
-let jesus: Jesus = null
+let tes: Jesus = null
 scene.setBackgroundColor(9)
-jesus = codeplant.jesus.create(SpriteKind.Player)
-jesus.sprite.setPosition(141, 13)
-controller.moveSprite(jesus.sprite)
+tes = codeplant.jesus.create(SpriteKind.Player)
+tes.sprite.setPosition(141, 13)
+controller.moveSprite(tes.sprite)
