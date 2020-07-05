@@ -1856,7 +1856,7 @@ class Jesus {
  * Sprite wrapper for characters
  */
 //% weight=100
-//% groups'["Leper"]'
+//% groups='["Leper"]'
 namespace characters {
 
     //% blockId=leperCreate block="sprite of kind %kind=spritekind || at x %x y %y"
@@ -1957,7 +1957,6 @@ namespace characters {
 * Sprite Wrapper for codeplant.explosions
 */
 //% weight=100 color=#d2b48c 
-//% blockNamespace=effects
 //% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Healing"]'
 namespace effects {
 
@@ -2519,8 +2518,9 @@ namespace effects {
         `, SpriteKind.Projectile);
 
     }
+
+    //% blockId=bolt block="bolt sprite"
     //% group="Healing"
-    //% blockId=bolt block="%bolt sprite"
     //% weight=8
     export function bolt() {
         return _bolt;
