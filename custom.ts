@@ -875,8 +875,6 @@ class Jesus {
         )
     }
 
-
-
     playIdleLeftAnimation() {
         animation.runImageAnimation(
             this.player,
@@ -1188,7 +1186,7 @@ class Jesus {
             . . . . . . . . . . . . . e d d d . . . . . e d d d . . . .
             . . . . . . . . . . . . e e e e e . . . . e e e e e . . . .
             . . . . . . . . . . . . f f f f f . . . . f f f f f . . . .
-     `, img`
+        `, img`
             . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
             . . . . . . . . . . . . . e e e f e . . . . . . . . . . . .
             . . . . . . . . . . . . f e f f f e e e . . . . . . . . . .
@@ -1231,7 +1229,7 @@ class Jesus {
             . . . . . . . . . . . e d d d 2 . . . . . . e d d d . . . .
             . . . . . . . . . . e e e e e . . . . . . e e e e e . . . .
             . . . . . . . . . . f f f f f . . . . . . f f f f f . . . .
-     `, img`
+        `, img`
             . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
             . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
             . . . . . . . . . . e e e e f e e f f e . . . . . . . . . .
@@ -1274,7 +1272,7 @@ class Jesus {
             . . . . . . . . . . . e d d d 2 . e d d d . . . . . . . . .
             . . . . . . . . . . e e e e e . e e e e e . . . . . . . . .
             . . . . . . . . . . f f f f f . f f f f f . . . . . . . . .
-     `, img`
+        `, img`
             . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
             . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
             . . . . . . . . . . e e e e f e e f f e . . . . . . . . . .
@@ -1317,7 +1315,7 @@ class Jesus {
             . . . . . . . . . . . . . . . e d d d 2 d . . . . . . . . .
             . . . . . . . . . . . . . . e e e e e e e . . . . . . . . .
             . . . . . . . . . . . . . . f f f f f f f . . . . . . . . .
-     `, img`
+        `, img`
             . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
             . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
             . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
@@ -1408,7 +1406,7 @@ class Jesus {
                 . . . . . . . . . . . . . e d d d . . . . . e d d d . . . .
                 . . . . . . . . . . . . e e e e e . . . . e e e e e . . . .
                 . . . . . . . . . . . . f f f f f . . . . f f f f f . . . .
-     `, img`
+        `, img`
                 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
                 . . . . . . . . . . . . . e e e f e . . . . . . . . . . . .
                 . . . . . . . . . . . . f e f f f e e e . . . . . . . . . .
@@ -1451,7 +1449,7 @@ class Jesus {
                 . . . . . . . . . . . e d d d 2 . . . . . . e d d d . . . .
                 . . . . . . . . . . e e e e e . . . . . . e e e e e . . . .
                 . . . . . . . . . . f f f f f . . . . . . f f f f f . . . .
-     `, img`
+        `, img`
                 . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
                 . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
                 . . . . . . . . . . e e e e f e e f f e . . . . . . . . . .
@@ -1494,7 +1492,7 @@ class Jesus {
                 . . . . . . . . . . . e d d d 2 . e d d d . . . . . . . . .
                 . . . . . . . . . . e e e e e . e e e e e . . . . . . . . .
                 . . . . . . . . . . f f f f f . f f f f f . . . . . . . . .
-     `, img`
+        `, img`
                 . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
                 . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
                 . . . . . . . . . . e e e e f e e f f e . . . . . . . . . .
@@ -1537,7 +1535,7 @@ class Jesus {
                 . . . . . . . . . . . . . . . e d d d 2 d . . . . . . . . .
                 . . . . . . . . . . . . . . e e e e e e e . . . . . . . . .
                 . . . . . . . . . . . . . . f f f f f f f . . . . . . . . .
-     `, img`
+        `, img`
                 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
                 . . . . . . . . . . . . e e e f e . . . . . . . . . . . . .
                 . . . . . . . . . . . f e f f f e e e . . . . . . . . . . .
@@ -1863,10 +1861,14 @@ class Jesus {
 //% groups'["Leper"]'
 namespace characters {
 
-    //% blockId=leper block="Leper"
-    //%group="Leper"
-    export function Leper() {
-        return sprites.create(img`
+    //% blockId=leperCreate block="sprite of kind %kind=spritekind || at x %x y %y"
+    //% expandableArgumentMode=toggle
+    //% inlineInputMode=inline
+    //% blockSetVariable=leper
+    //% weight=100
+    //% group="Create Leper"
+    export function Leper(x:number,y:number,kind:number) {
+        sprites.create(img`
             . . . . . . . . . . . . . . . . . . . . . . . . .
             . . . . . . . . . . . . . . . . . . . . . . . . .
             . . . . . . . . . . . . . . . . . . . . . . . . .
@@ -1902,12 +1904,16 @@ namespace characters {
             . . . . . . . e e . . . . . . . e e . . . . . . .
             . . . . . e e e e . . . . . . . e e e e . . . . .
             . . . . . e e e e . . . . . . . e e e e . . . . .
-        `, SpriteKind.Player)
+        `, kind)
     }
-    //% blockId=leperHealed block="Leper Healed"
-    //%group="Leper"
-    export function LeperHealed() {
-        return sprites.create(img`
+    //% blockId=leperHealedCreate block="sprite of kind %kind=spritekind || at x %x y %y"
+    //% expandableArgumentMode=toggle
+    //% inlineInputMode=inline
+    //% blockSetVariable=leperHealed
+    //% weight=100
+    //% group="Create Leper Healed"
+    export function LeperHealed(x: number, y: number, kind: number) {
+        sprites.create(img`
             . . . . . . . f f f f f f f f f f f . . . . . . .
             . . . . . . f f f f f f f f f f f f f . . . . . .
             . . . . . . f f f f e e e e e e f f f . . . . . .
@@ -1943,7 +1949,7 @@ namespace characters {
             . . . . . . . e e . . . . . . . e e . . . . . . .
             . . . . . e e e e . . . . . . . e e e e . . . . .
             . . . . . e e e e . . . . . . . e e e e . . . . .
-        `, SpriteKind.Player)
+        `, kind)
     }
 
 }
