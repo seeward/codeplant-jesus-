@@ -6,7 +6,7 @@
 namespace codeplant.jesus {
 
     //% block blockId=animationTypes
-    enum _AnimationTypes {
+    export enum AnimationTypes {
         //% block='HealLeftWithStaff'
         HealLeftWithStaff = 1,
         //% block='HealRightWithStaff'
@@ -88,25 +88,25 @@ namespace codeplant.jesus {
     //% weight=100
     //% group="Animations"
     //% a.shadow=animationTypes
-    export function playAnimation(s: _AnimationTypes) {
+    export function playAnimation(s: AnimationTypes) {
 
         switch (s) {
-            case _AnimationTypes.HealLeftWithStaff:
+            case AnimationTypes.HealLeftWithStaff:
                 _jesus.playAttackLeftAnimation();
                 break
-            case _AnimationTypes.HealRightWithStaff:
+            case AnimationTypes.HealRightWithStaff:
                 _jesus.playAttackRightAnimation();
                 break
-            case _AnimationTypes.IdleLeft:
+            case AnimationTypes.IdleLeft:
                 _jesus.playIdleLeftAnimation();
                 break
-            case _AnimationTypes.IdleRight:
+            case AnimationTypes.IdleRight:
                 _jesus.playIdleRightAnimation();
                 break
-            case _AnimationTypes.WalkLeft:
+            case AnimationTypes.WalkLeft:
                 _jesus.playWalkLeftAnimation();
                 break
-            case _AnimationTypes.WalkRight:
+            case AnimationTypes.WalkRight:
                 _jesus.playWalkRightAnimation();
                 break
 
@@ -134,6 +134,8 @@ namespace codeplant.jesus {
         }
         return output;
     }
+
+    
 
     
 }
