@@ -1858,7 +1858,7 @@ class Jesus {
 /**
  * Spriate wrapper for characters
  */
-//% blockNamespace = characters 
+//% blockNamespace=codeplant.jesus
 //% weight=100
 //% groups='["Leper"]'
 namespace characters {
@@ -1960,8 +1960,8 @@ namespace characters {
 /**
 * Sprite Wrapper for codeplant.explosions
 */
-//% blockNamespace = effects 
 //% weight=100 color=#d2b48c 
+//% blockNamespace=codeplant.jesus
 //% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Healing"]'
 namespace effects {
 
