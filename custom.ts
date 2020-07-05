@@ -1858,9 +1858,7 @@ class Jesus {
 /**
  * Spriate wrapper for characters
  */
-//% blockNamespace=codeplant.jesus
-//% weight=100
-//% groups='["Leper"]'
+
 namespace characters {
 
     //% blockId=leperCreate block="sprite of kind %kind=spritekind || at x %x y %y"
@@ -1868,7 +1866,6 @@ namespace characters {
     //% inlineInputMode=inline
     //% blockSetVariable=leper
     //% weight=100
-    //% group="Leper"
     export function Leper(x: number, y: number, kind: number) {
         sprites.create(img`
             . . . . . . . . . . . . . . . . . . . . . . . . .
@@ -1913,7 +1910,6 @@ namespace characters {
     //% inlineInputMode=inline
     //% blockSetVariable=leperHealed
     //% weight=100
-    //% group="Leper"
     export function LeperHealed(x: number, y: number, kind: number) {
         sprites.create(img`
             . . . . . . . f f f f f f f f f f f . . . . . . .
@@ -1961,7 +1957,6 @@ namespace characters {
 * Sprite Wrapper for codeplant.explosions
 */
 //% weight=100 color=#d2b48c 
-//% blockNamespace=codeplant.jesus
 //% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Healing"]'
 namespace effects {
 
