@@ -2502,10 +2502,10 @@ namespace effects {
         //%block='Right',
         Right = 2
     }
-    //% blockId=sendHealingBolt block="Send Bolt from Sprite %s towards %d"
+    //% blockId=sendHealingBolt block="Send Bolt from Sprite %s towards %d for %t secs"
     //% weight=100
     //% group="Healing"
-    export function sendHealingBolt(s: Sprite, d: Direction) {
+    export function sendHealingBolt(s: Sprite, d: Direction, t: number) {
 
         let healingBolt = sprites.create(img`
             . . 1 1 1 1 . .
@@ -2563,6 +2563,8 @@ namespace effects {
         healingBolt.setPosition(s.x - side, s.y)
         let vel = d === Direction.Left ? -200 : 200
         healingBolt.setVelocity(vel, 0)
+        pause(1000)
+        healingBolt.destroy()
     }
 
     //% blockId=playSmallHealing block="Play Small Healing on Sprite %s"
