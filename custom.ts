@@ -65,78 +65,8 @@ namespace codeplant.jesus {
         . . e e . . . . f f f f f . . . . f f f f f . . . . . . . .
     `]
 
-    export let _jesus_right: Image[] = [img`
-        . . . . . . . . . . . 1 1 1 1 1 1 . . . . . . . . . . . . .
-        . . . . . . . . . 1 1 1 1 1 1 . . . . . . . . . . . . . . .
-        . . . . . . . . 1 1 1 1 1 e e f e . . . . . . . . . . . . .
-        . . . . . . . 1 1 1 1 1 e f f f e e e . . . . . . . . . . .
-        . . . . . . 1 1 1 1 e e e e f e e f f e . . . . . . . . . .
-        . . . . . 1 1 1 . e f f e e e e e e f e e . . . . . . . . .
-        . . . . . 1 1 1 . f f e d d d e f e f f e . . . . . . . . .
-        . . . . 1 1 1 . . e e d d d d d e e e f e e . . . . . . . .
-        . . . . 1 1 . . . e d d d d d d d f f e e e . . . . . . . .
-        . . . 1 1 . . . . . d f d d d f d f e e f e . . . . . . . .
-        . . . 1 1 . . . . . d d d d d d d e d e e f . . . . . . . .
-        . . 1 1 . . . . . . d d d d d d d e d e f f . . . . . . . .
-        . 1 1 1 . . . . . . d e e e e e d e e e e e . . . . . . . .
-        . 1 1 . . . . . . . . e d d d e d e f f e f . . . . . . . .
-        . 1 1 . . . . . . . . e e e e e e e e f e . . . . . . . . .
-        . 1 1 . . . . . . . . e e e e e e d e f . . . . . . . . . .
-        . 1 1 . . . . . . . . . e e e e d d . . . . . . . . . . . .
-        . 1 1 . 1 . . . . . 2 2 2 2 2 d d 1 1 1 . . . . . . . . . .
-        . 1 1 . 1 1 . . . 2 2 2 2 2 1 1 1 1 1 1 . . . . . . . . . .
-        . 1 . . 1 1 1 . 1 1 2 2 2 2 2 1 1 1 1 1 1 . . . . . . . . .
-        . 1 . . 1 1 1 1 1 1 2 2 2 2 2 2 2 1 1 1 1 . . . . . . . . .
-        . 1 . . . 1 1 1 1 1 2 2 2 2 2 2 2 1 1 1 1 . . . . . . . . .
-        . e . . . 1 1 1 1 1 1 2 2 2 2 2 2 2 1 1 1 . . . . . . . . .
-        . e . . . 1 1 1 1 1 1 2 2 2 2 2 2 2 1 1 1 1 . . . . . . . .
-        . e . . . 1 1 1 1 1 1 2 2 2 2 2 2 2 1 1 1 1 . . . . . . . .
-        . . . . . 1 1 1 1 1 1 2 2 2 2 2 2 2 1 1 1 1 . . . . . . . .
-        . . . . . 1 1 1 1 1 1 e e e e e e e e 1 1 1 . . . . . . . .
-        . . . . . . 1 1 1 1 1 1 1 2 2 2 2 2 2 1 1 . . . . . . . . .
-        . . . . . . . . . 2 1 1 1 2 2 2 2 2 2 2 2 . . . . . . . . .
-        . . . . . . . . . 2 1 1 1 2 2 2 2 2 2 2 2 . . . . . . . . .
-        . . . . . . . . . 2 1 1 1 1 2 2 2 2 2 2 2 . . . . . . . . .
-        . . . . . . . . . . 1 1 1 1 2 2 2 2 2 2 2 . . . . . . . . .
-        . . . . . . . . . 1 1 1 1 1 2 2 2 2 2 2 2 2 . . . . . . . .
-        . . . . . . . . . 1 1 1 1 1 2 2 2 2 2 2 2 2 . . . . . . . .
-        . . . . . . . . . 1 1 1 1 1 1 2 2 2 2 2 2 2 . . . . . . . .
-        . . . . . . . . . 1 1 1 1 1 1 2 2 2 2 2 2 2 . . . . . . . .
-        . . . . . . . . . 1 1 1 1 1 1 2 2 2 2 2 2 2 2 . . . . . . .
-        . . . . . . . . . 1 1 1 1 1 1 2 2 2 2 2 2 2 2 . . . . . . .
-        . . . . . . . . . 1 1 1 1 1 1 2 2 2 2 2 2 2 2 . . . . . . .
-        . . . . . . . . . e d d d . . . . . e d d d . . . . . . . .
-        . . . . . . . . e e e e e . . . . e e e e e . . . . . . . .
-        . . . . . . . . f f f f f . . . . f f f f f . . . . . . . .
-    `, img`
-        . . . . . . . . . . . . .
-        . . . e f f e f e e . . .
-        . . e f e e f e e f e . .
-        . f f e f f f e f e f e .
-        e f e e f e e f e e f e .
-        f e e f f e e e 4 e e f e
-        . f f e e 4 4 4 4 4 e e e
-        . e e 4 4 4 4 4 4 4 4 e .
-        . f f f f f f 4 4 f f f f
-        . 4 f 4 f 4 e f f e 4 f .
-        . . e 4 f f f 4 4 f f f .
-        . . . 4 4 4 4 4 e 4 4 . .
-        . . . 4 4 4 4 4 e 4 4 . .
-        . . . . 4 4 4 e 4 4 4 . .
-        . e e e 4 4 4 4 4 4 e e .
-        . e . e e e 4 4 4 e . e .
-        . e . e e e e e e e . e .
-        . 4 . e e e e e e e . 4 .
-        . 4 . e e e e e e e . 4 .
-        . 4 . c c c c c c c . 4 .
-        . 4 . c c c c c c c . 4 .
-        . . . c c c . c c c . . .
-        . . . . 4 4 . . 4 4 . . .
-        . . . e e b . . b e e . .
-        . . . f f f . . f f f . .
-    `]
 
-    export let _jesus_left: Image[] = reflect(_jesus_right);
+
 
     //% blockId=jesusCreate block="sprite of kind %kind=spritekind || at x %x y %y"
     //% expandableArgumentMode=toggle
@@ -180,12 +110,7 @@ namespace codeplant.jesus {
     function playAttackRightAnimation() {
         _jesus.playAttackRightAnimation()
     }
-    function playWalkLeftAnimation() {
-        _jesus.playWalkLeftAnimation()
-    }
-    function playWalkRightAnimation() {
-        _jesus.playWalkRightAnimation()
-    }
+
     function playIdleLeftAnimation() {
         _jesus.playIdleLeftAnimation()
     }
@@ -197,7 +122,7 @@ namespace codeplant.jesus {
        
     }
     function playWalkUpAnimation() {
-        _jesus.playIdleBackAnimation()
+
     }
 
 
@@ -964,8 +889,6 @@ class Jesus {
 
 
 
-
-
     playIdleLeftAnimation() {
         animation.runImageAnimation(
             this.player,
@@ -1500,19 +1423,6 @@ class Jesus {
         )
     }
 
-    playWalkRightAnimation() {
-        
-    }
-    playIdleBackAnimation(): void {
-        
-    }
-
-
-    playWalkLeftAnimation() {
-        
-    }
-
-
 
 }
 
@@ -1613,8 +1523,8 @@ export function LeperHealed() {
 * Sprite Wrapper for codeplant.explosions
 */
 //% weight=100 color=#d2b48c 
-//% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Misc"]'
-namespace explosions {
+//% groups='["Small Explosions", "Med Explosions", "Large Explosions", "Healing"]'
+namespace effects {
 
     //% blockId=MedExplosionOne block="Med Explosion 1 on Sprite %s"
     //% weight=100
@@ -2155,7 +2065,7 @@ namespace explosions {
     }
     //% blockId=sendHealingBolt block="Send Bolt from Sprite %s towards %d"
     //% weight=100
-    //% group="Misc"
+    //% group="Healing"
     export function sendHealingBolt(s: Sprite,d: Direction) {
 
         let healingBolt = sprites.create(img`
@@ -2218,7 +2128,7 @@ namespace explosions {
 
     //% blockId=playSmallHealing block="Play Small Healing on Sprite %s"
     //% weight=100
-    //% group="Misc"
+    //% group="Healing"
     export function playSmallHealingAnimation(s: Sprite) {
         animation.runImageAnimation(
             s,
