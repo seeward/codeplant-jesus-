@@ -2,7 +2,7 @@
 * Sprite Wrapper for a codeplant.jesus lessons
 */
 //% weight=100 color=#d2b48c 
-//% groups='["Create Jesus", "Jesus Properties", "Jesus Animations", "Leper"]'
+//% groups='["Create Jesus", "Properties", "Animations"]'
 namespace codeplant.jesus {
 
     //% block blockId=animationTypes
@@ -135,13 +135,12 @@ namespace codeplant.jesus {
 
 
 
-    //% blockId=leper block="sprite of kind %kind=spritekind || at x %x y %y"
+    //% blockId=leper block="Leper of kind %kind=spritekind || at x %x y %y"
     //% expandableArgumentMode=toggle
     //% inlineInputMode=inline
     //% blockSetVariable=leper
-    //% group="Leper"
     //% weight=100
-    export function Leper(x: number, y: number, kind: number) {
+    export function leper(x: number, y: number, kind: number):Sprite {
         return sprites.create(img`
             . . . . . . . . . . . . . . . . . . . . . . . . .
             . . . . . . . . . . . . . . . . . . . . . . . . .
@@ -180,13 +179,12 @@ namespace codeplant.jesus {
             . . . . . e e e e . . . . . . . e e e e . . . . .
         `, kind)
     }
-    //% blockId=leperHealed block="sprite of kind %kind=spritekind || at x %x y %y"
+    //% blockId=leperHealed block="HealedLeper of kind %kind=spritekind || at x %x y %y"
     //% expandableArgumentMode=toggle
     //% inlineInputMode=inline
     //% blockSetVariable=leperHealed
-    //% group="Leper"
     //% weight=100
-    export function LeperHealed(x: number, y: number, kind: number) {
+    export function leperHealed(x: number, y: number, kind: number):Sprite {
         return sprites.create(img`
             . . . . . . . f f f f f f f f f f f . . . . . . .
             . . . . . . f f f f f f f f f f f f f . . . . . .
