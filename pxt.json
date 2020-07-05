@@ -6,12 +6,11 @@
     },
     "description": "Jesus sprites and animations",
     "files": [
-        "main.blocks",
         "main.ts",
         "README.md",
         "custom.ts"
     ],
-    "preferredEditor": "blocksprj",
+    "preferredEditor": "tsprj",
     "testFiles": [
         "test.ts"
     ]
