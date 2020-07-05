@@ -139,6 +139,7 @@ namespace codeplant.jesus {
     //% expandableArgumentMode=toggle
     //% inlineInputMode=inline
     //% blockSetVariable=leper
+    //% group="Leper"
     //% weight=100
     export function Leper(x: number, y: number, kind: number) {
         return sprites.create(img`
@@ -183,6 +184,7 @@ namespace codeplant.jesus {
     //% expandableArgumentMode=toggle
     //% inlineInputMode=inline
     //% blockSetVariable=leperHealed
+    //% group="Leper"
     //% weight=100
     export function LeperHealed(x: number, y: number, kind: number) {
         return sprites.create(img`
