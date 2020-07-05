@@ -6,7 +6,7 @@
 namespace codeplant.jesus {
 
     //% block blockId=animationTypes
-    export enum AnimationTypes {
+    enum AnimationTypes {
         //% block='HealLeftWithStaff'
         HealLeftWithStaff = 1,
         //% block='HealRightWithStaff'
