@@ -141,7 +141,7 @@ namespace codeplant.jesus {
     //% blockSetVariable=leper
     //% weight=100
     export function Leper(x: number, y: number, kind: number) {
-        sprites.create(img`
+        return sprites.create(img`
             . . . . . . . . . . . . . . . . . . . . . . . . .
             . . . . . . . . . . . . . . . . . . . . . . . . .
             . . . . . . . . . . . . . . . . . . . . . . . . .
@@ -185,7 +185,7 @@ namespace codeplant.jesus {
     //% blockSetVariable=leperHealed
     //% weight=100
     export function LeperHealed(x: number, y: number, kind: number) {
-        sprites.create(img`
+        return sprites.create(img`
             . . . . . . . f f f f f f f f f f f . . . . . . .
             . . . . . . f f f f f f f f f f f f f . . . . . .
             . . . . . . f f f f e e e e e e f f f . . . . . .
