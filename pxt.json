@@ -10,7 +10,5 @@
         "custom.ts"
     ],
     "preferredEditor": "tsprj",
-    "testFiles": [
-        "test.ts"
-    ]
+    "testFiles": []
 }

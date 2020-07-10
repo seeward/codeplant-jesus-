@@ -952,16 +952,11 @@ class Jesus {
 
 
     public constructor(kind: number, x: number, y: number) {
-
-
-    
-
         this.player = sprites.create(codeplant.jesus._jesus_still[0], kind);
         this.player.setFlag(SpriteFlag.StayInScreen, true);
         this.player.x = x;
         this.player.y = y;
         this.playIdleLeftAnimation();
-
     }
 
 
