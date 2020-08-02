@@ -5,6 +5,9 @@
 //% groups='["Create Jesus", "Properties", "Animations"]'
 namespace codeplant.jesus {
 
+
+
+
     //% block blockId=animationTypes
     export enum AnimationTypes {
         //% block='HealLeftWithStaff'
@@ -20,8 +23,6 @@ namespace codeplant.jesus {
         //% block='WalkRight'
         WalkRight = 6
     }
-
-
 
     let _jesus: Jesus = null
 
@@ -113,7 +114,6 @@ namespace codeplant.jesus {
         }
 
     }
-
 
     export function reflect(input: Image[]): Image[] {
         let output: Image[] = [];
@@ -950,7 +950,6 @@ class Jesus {
         . . e e . . . . f f f f f . . . . f f f f f . . . . . . . .
     `];
 
-
     public constructor(kind: number, x: number, y: number) {
         this.player = sprites.create(codeplant.jesus._jesus_still[0], kind);
         this.player.setFlag(SpriteFlag.StayInScreen, true);
@@ -958,7 +957,6 @@ class Jesus {
         this.player.y = y;
         this.playIdleLeftAnimation();
     }
-
 
     //% group="Jesus Properties"
     //% blockId=jesusSprite block="%Jesus(jesus) sprite"
@@ -983,7 +981,6 @@ class Jesus {
             false
         )
     }
-
     playIdleLeftAnimation() {
         animation.runImageAnimation(
             this.player,
@@ -992,7 +989,6 @@ class Jesus {
             true
         )
     }
-
     playWalkRightAnimation() {
         animation.runImageAnimation(this.player, codeplant.jesus.reflect(this.walkFrames), 100, true)
     }
@@ -1004,7 +1000,6 @@ class Jesus {
             true
         )
     }
-
     playIdleRightAnimation() {
         animation.runImageAnimation(
             this.player,
@@ -1013,7 +1008,6 @@ class Jesus {
             true
         )
     }
-
 
 }
 
